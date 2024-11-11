@@ -1,7 +1,6 @@
 GIT_HASH            ?= $(shell git rev-parse --short HEAD)
 
-DOCKER_REGISTRY		  ?= registry.docker.com
-DOCKER_IMAGE        ?= $(DOCKER_REGISTRY)/xiam/openvpn-proxy
+DOCKER_IMAGE        ?= xiam/openvpn-proxy
 DOCKER_TAG          ?= $(GIT_HASH)
 
 SSH_PRIVATE_KEY     ?= $(HOME)/.ssh/id_ed25519
