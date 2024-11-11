@@ -3,8 +3,6 @@ GIT_HASH            ?= $(shell git rev-parse --short HEAD)
 DOCKER_IMAGE        ?= xiam/openvpn-proxy
 DOCKER_TAG          ?= $(GIT_HASH)
 
-SSH_PRIVATE_KEY     ?= $(HOME)/.ssh/id_ed25519
-
 docker-build:
 	docker build -t $(DOCKER_IMAGE):$(DOCKER_TAG) .
 
